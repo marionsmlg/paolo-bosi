@@ -184,17 +184,26 @@ const categories = [
 
 export default function Gallery() {
   const [selectedCategory, setSelectedCategory] = useState("tous");
-  const containerRef = useRef(null);
+  const row1Ref = useRef(null);
+  const row2Ref = useRef(null);
 
   const filteredSculptures = selectedCategory === "tous"
     ? sculptures
     : sculptures.filter(sculpture => sculpture.category === selectedCategory);
 
   const scroll = (direction) => {
-    if (containerRef.current) {
-      const scrollAmount = 320;
-      containerRef.current.scrollBy({
-        left: direction === 'left' ? -scrollAmount : scrollAmount,
+    const scrollAmount = 320;
+    const scrollValue = direction === 'left' ? -scrollAmount : scrollAmount;
+    
+    if (row1Ref.current) {
+      row1Ref.current.scrollBy({
+        left: scrollValue,
+        behavior: 'smooth'
+      });
+    }
+    if (row2Ref.current) {
+      row2Ref.current.scrollBy({
+        left: scrollValue,
         behavior: 'smooth'
       });
     }
@@ -223,14 +232,14 @@ export default function Gallery() {
           ))}
         </div>
 
-        <div className="mt-12 w-full overflow-hidden relative">
-          <div
-            ref={containerRef}
-            className="flex flex-col gap-6 overflow-x-auto scrollbar-hide"
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-          >
+        <div className="mt-12 w-full relative">
+          <div className="flex flex-col gap-6">
             {/* Première ligne */}
-            <div className="overflow-hidden">
+            <div 
+              ref={row1Ref}
+              className="overflow-x-auto scrollbar-hide"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
               <div className={`flex ${selectedCategory === 'tous' ? '' : 'justify-center'} ${selectedCategory === 'tous' ? 'animate-scroll' : ''}`}>
                 {(selectedCategory === 'tous' ? [...filteredSculptures, ...filteredSculptures] : filteredSculptures)
                   .filter((_, index) => index % 2 === 0)
@@ -254,7 +263,11 @@ export default function Gallery() {
               </div>
             </div>
             {/* Deuxième ligne */}
-            <div className="overflow-hidden">
+            <div 
+              ref={row2Ref}
+              className="overflow-x-auto scrollbar-hide"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
               <div className={`flex ${selectedCategory === 'tous' ? '' : 'justify-center'} ${selectedCategory === 'tous' ? 'animate-scroll' : ''}`}>
                 {(selectedCategory === 'tous' ? [...filteredSculptures, ...filteredSculptures] : filteredSculptures)
                   .filter((_, index) => index % 2 === 1)
@@ -299,8 +312,8 @@ export default function Gallery() {
             </svg>
           </button>
 
-          <div className="absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-background-light dark:from-background-dark to-transparent pointer-events-none"></div>
-          <div className="absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-background-light dark:from-background-dark to-transparent pointer-events-none"></div>
+          <div className="absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-background-light dark:from-background-dark to-transparent pointer-events-none z-10"></div>
+          <div className="absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-background-light dark:from-background-dark to-transparent pointer-events-none z-10"></div>
         </div>
       </div>
     </section>
