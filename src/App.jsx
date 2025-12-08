@@ -5,6 +5,7 @@ import About from './About'
 import Exhibitions from './Exhibitions'
 import Atelier from './Atelier'
 import Contact from './Contact'
+import Navigation from './Navigation'
 
 function App() {
   return (
@@ -16,14 +17,29 @@ function App() {
           className="h-16 w-auto"
         />
       </header>
+      <Navigation />
       <div className="flex h-full grow flex-col">
-        <Hero />
-        <Gallery />
-        <Philosophy />
-        <About />
-        <Exhibitions />
-        <Atelier />
-        <Contact />
+        <div id="hero">
+          <Hero />
+        </div>
+        <div id="gallery">
+          <Gallery />
+        </div>
+        <div id="philosophy">
+          <Philosophy />
+        </div>
+        <div id="about">
+          <About />
+        </div>
+        <div id="exhibitions">
+          <Exhibitions />
+        </div>
+        <div id="atelier">
+          <Atelier />
+        </div>
+        <div id="contact">
+          <Contact />
+        </div>
       </div>
     </div>
   )

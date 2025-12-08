@@ -184,17 +184,16 @@ const categories = [
 
 export default function Gallery() {
   const [selectedCategory, setSelectedCategory] = useState("tous");
-  const [isPaused, setIsPaused] = useState(false);
-  const scrollRef = useRef(null);
+  const containerRef = useRef(null);
 
   const filteredSculptures = selectedCategory === "tous"
     ? sculptures
     : sculptures.filter(sculpture => sculpture.category === selectedCategory);
 
   const scroll = (direction) => {
-    if (scrollRef.current) {
-      const scrollAmount = 420;
-      scrollRef.current.scrollBy({
+    if (containerRef.current) {
+      const scrollAmount = 320;
+      containerRef.current.scrollBy({
         left: direction === 'left' ? -scrollAmount : scrollAmount,
         behavior: 'smooth'
       });
@@ -226,13 +225,13 @@ export default function Gallery() {
 
         <div className="mt-12 w-full overflow-hidden relative">
           <div
-            className="flex flex-col gap-6"
-            // onMouseEnter={() => setIsPaused(true)}
-            // onMouseLeave={() => setIsPaused(false)}
+            ref={containerRef}
+            className="flex flex-col gap-6 overflow-x-auto scrollbar-hide"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             {/* Première ligne */}
             <div className="overflow-hidden">
-              <div className={`flex ${selectedCategory === 'tous' ? '' : 'justify-center'} ${!isPaused && selectedCategory === 'tous' ? 'animate-scroll' : ''}`}>
+              <div className={`flex ${selectedCategory === 'tous' ? '' : 'justify-center'} ${selectedCategory === 'tous' ? 'animate-scroll' : ''}`}>
                 {(selectedCategory === 'tous' ? [...filteredSculptures, ...filteredSculptures] : filteredSculptures)
                   .filter((_, index) => index % 2 === 0)
                   .map((sculpture, index) => (
@@ -256,7 +255,7 @@ export default function Gallery() {
             </div>
             {/* Deuxième ligne */}
             <div className="overflow-hidden">
-              <div className={`flex ${selectedCategory === 'tous' ? '' : 'justify-center'} ${!isPaused && selectedCategory === 'tous' ? 'animate-scroll' : ''}`}>
+              <div className={`flex ${selectedCategory === 'tous' ? '' : 'justify-center'} ${selectedCategory === 'tous' ? 'animate-scroll' : ''}`}>
                 {(selectedCategory === 'tous' ? [...filteredSculptures, ...filteredSculptures] : filteredSculptures)
                   .filter((_, index) => index % 2 === 1)
                   .map((sculpture, index) => (
@@ -282,7 +281,7 @@ export default function Gallery() {
 
           <button
             onClick={() => scroll('left')}
-            className="absolute left-4 top-1/3 -translate-y-1/2 backdrop-blur-md bg-white/30 dark:bg-gray-800/30 rounded-full p-3 shadow-lg hover:bg-white/40 dark:hover:bg-gray-800/40 transition-all z-10"
+            className="absolute left-4 top-1/2 -translate-y-1/2 backdrop-blur-sm dark:bg-gray-800/30 rounded-full p-3 shadow-lg hover:bg-white/30 dark:hover:bg-gray-800/40 transition-all z-10"
             aria-label="Scroll left"
           >
             <svg className="w-6 h-6 text-text-primary dark:text-text-primary-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -292,7 +291,7 @@ export default function Gallery() {
 
           <button
             onClick={() => scroll('right')}
-            className="absolute right-4 top-1/3 -translate-y-1/2 backdrop-blur-md bg-white/30 dark:bg-gray-800/30 rounded-full p-3 shadow-lg hover:bg-white/40 dark:hover:bg-gray-800/40 transition-all z-10"
+            className="absolute right-4 top-1/2 -translate-y-1/2 backdrop-blur-sm dark:bg-gray-800/30 rounded-full p-3 shadow-lg hover:bg-white/30 dark:hover:bg-gray-800/40 transition-all z-10"
             aria-label="Scroll right"
           >
             <svg className="w-6 h-6 text-text-primary dark:text-text-primary-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -45,7 +45,7 @@ body {
 }
 
 .animate-scroll {
-  animation: scroll 80s linear infinite;
+  animation: scroll 50s linear infinite;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
