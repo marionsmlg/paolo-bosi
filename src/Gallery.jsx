@@ -192,9 +192,9 @@ export default function Gallery() {
     : sculptures.filter(sculpture => sculpture.category === selectedCategory);
 
   const scroll = (direction) => {
-    const scrollAmount = 320;
+    const scrollAmount = 220;
     const scrollValue = direction === 'left' ? -scrollAmount : scrollAmount;
-    
+
     if (row1Ref.current) {
       row1Ref.current.scrollBy({
         left: scrollValue,
@@ -208,6 +208,12 @@ export default function Gallery() {
       });
     }
   };
+
+  // Détermine si on affiche sur deux lignes (seulement si "tous" ou plus de 3 images)
+  const shouldSplitRows = selectedCategory === "tous" || filteredSculptures.length > 3;
+  // Active l'animation automatique si "tous" ou plus de 8 images
+  const shouldAutoScroll = selectedCategory === "tous" || filteredSculptures.length > 8;
+  const displaySculptures = shouldAutoScroll ? [...filteredSculptures, ...filteredSculptures] : filteredSculptures;
 
   return (
     <section className="w-full py-8">
@@ -234,62 +240,93 @@ export default function Gallery() {
 
         <div className="mt-12 w-full relative">
           <div className="flex flex-col gap-6">
-            {/* Première ligne */}
-            <div 
-              ref={row1Ref}
-              className="overflow-x-auto scrollbar-hide"
-              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-            >
-              <div className={`flex ${selectedCategory === 'tous' ? '' : 'justify-center'} ${selectedCategory === 'tous' ? 'animate-scroll' : ''}`}>
-                {(selectedCategory === 'tous' ? [...filteredSculptures, ...filteredSculptures] : filteredSculptures)
-                  .filter((_, index) => index % 2 === 0)
-                  .map((sculpture, index) => (
-                  <div key={`${sculpture.id}-${index}-row1`} className="flex-shrink-0 px-3">
-                    <div className="flex flex-col gap-3 w-[300px]">
-                      <div
-                        className="aspect-[3/4] w-full bg-cover bg-center bg-no-repeat rounded"
-                        style={{ backgroundImage: `url("${sculpture.image}")` }}
-                        role="img"
-                        aria-label={sculpture.alt}
-                      />
-                      <div>
-                        <p className="text-base font-medium leading-normal">
-                          {sculpture.title}
-                        </p>
+            {shouldSplitRows ? (
+              <>
+                {/* Première ligne */}
+                <div
+                  ref={row1Ref}
+                  className="overflow-x-auto scrollbar-hide px-8"
+                  style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                >
+                  <div className={`flex ${shouldAutoScroll ? '' : 'justify-center'} ${shouldAutoScroll ? 'animate-scroll' : ''}`}>
+                    {displaySculptures
+                      .filter((_, index) => index % 2 === 0)
+                      .map((sculpture, index) => (
+                      <div key={`${sculpture.id}-${index}-row1`} className="flex-shrink-0 px-3">
+                        <div className="flex flex-col gap-3 w-[200px] sm:w-[250px] md:w-[300px]">
+                          <div
+                            className="aspect-[3/4] w-full bg-cover bg-center bg-no-repeat rounded"
+                            style={{ backgroundImage: `url("${sculpture.image}")` }}
+                            role="img"
+                            aria-label={sculpture.alt}
+                          />
+                          <div>
+                            <p className="text-base font-medium leading-normal">
+                              {sculpture.title}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                {/* Deuxième ligne */}
+                <div
+                  ref={row2Ref}
+                  className="overflow-x-auto scrollbar-hide px-8"
+                  style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                >
+                  <div className={`flex ${shouldAutoScroll ? '' : 'justify-center'} ${shouldAutoScroll ? 'animate-scroll' : ''}`}>
+                    {displaySculptures
+                      .filter((_, index) => index % 2 === 1)
+                      .map((sculpture, index) => (
+                      <div key={`${sculpture.id}-${index}-row2`} className="flex-shrink-0 px-3">
+                        <div className="flex flex-col gap-3 w-[200px] sm:w-[250px] md:w-[300px]">
+                          <div
+                            className="aspect-[3/4] w-full bg-cover bg-center bg-no-repeat rounded"
+                            style={{ backgroundImage: `url("${sculpture.image}")` }}
+                            role="img"
+                            aria-label={sculpture.alt}
+                          />
+                          <div>
+                            <p className="text-base font-medium leading-normal">
+                              {sculpture.title}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </>
+            ) : (
+              /* Une seule ligne pour 3 images ou moins */
+              <div
+                ref={row1Ref}
+                className="overflow-x-auto scrollbar-hide px-8"
+                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+              >
+                <div className="flex justify-center">
+                  {displaySculptures.map((sculpture, index) => (
+                    <div key={`${sculpture.id}-${index}-single`} className="flex-shrink-0 px-3">
+                      <div className="flex flex-col gap-3 w-[200px] sm:w-[250px] md:w-[300px]">
+                        <div
+                          className="aspect-[3/4] w-full bg-cover bg-center bg-no-repeat rounded"
+                          style={{ backgroundImage: `url("${sculpture.image}")` }}
+                          role="img"
+                          aria-label={sculpture.alt}
+                        />
+                        <div>
+                          <p className="text-base font-medium leading-normal">
+                            {sculpture.title}
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
-            {/* Deuxième ligne */}
-            <div 
-              ref={row2Ref}
-              className="overflow-x-auto scrollbar-hide"
-              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-            >
-              <div className={`flex ${selectedCategory === 'tous' ? '' : 'justify-center'} ${selectedCategory === 'tous' ? 'animate-scroll' : ''}`}>
-                {(selectedCategory === 'tous' ? [...filteredSculptures, ...filteredSculptures] : filteredSculptures)
-                  .filter((_, index) => index % 2 === 1)
-                  .map((sculpture, index) => (
-                  <div key={`${sculpture.id}-${index}-row2`} className="flex-shrink-0 px-3">
-                    <div className="flex flex-col gap-3 w-[300px]">
-                      <div
-                        className="aspect-[3/4] w-full bg-cover bg-center bg-no-repeat rounded"
-                        style={{ backgroundImage: `url("${sculpture.image}")` }}
-                        role="img"
-                        aria-label={sculpture.alt}
-                      />
-                      <div>
-                        <p className="text-base font-medium leading-normal">
-                          {sculpture.title}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            )}
           </div>
 
           <button
