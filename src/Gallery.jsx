@@ -329,31 +329,35 @@ export default function Gallery() {
             )}
           </div>
 
-          <button
-            onClick={() => scroll('left')}
-            className="absolute left-4 top-1/2 -translate-y-1/2 backdrop-blur-sm dark:bg-gray-800/30 rounded-full p-3 shadow-lg hover:bg-white/30 dark:hover:bg-gray-800/40 transition-all z-10"
-            aria-label="Scroll left"
-          >
-            <svg className="w-6 h-6 text-text-primary dark:text-text-primary-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
+          {shouldAutoScroll && (
+            <>
+              <button
+                onClick={() => scroll('left')}
+                className="absolute left-4 top-1/2 -translate-y-1/2 backdrop-blur-sm dark:bg-gray-800/30 rounded-full p-3 shadow-lg hover:bg-white/30 dark:hover:bg-gray-800/40 transition-all z-10"
+                aria-label="Scroll left"
+              >
+                <svg className="w-6 h-6 text-text-primary dark:text-text-primary-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
 
-          <button
-            onClick={() => scroll('right')}
-            className="absolute right-4 top-1/2 -translate-y-1/2 backdrop-blur-sm dark:bg-gray-800/30 rounded-full p-3 shadow-lg hover:bg-white/30 dark:hover:bg-gray-800/40 transition-all z-10"
-            aria-label="Scroll right"
-          >
-            <svg className="w-6 h-6 text-text-primary dark:text-text-primary-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
+              <button
+                onClick={() => scroll('right')}
+                className="absolute right-4 top-1/2 -translate-y-1/2 backdrop-blur-sm dark:bg-gray-800/30 rounded-full p-3 shadow-lg hover:bg-white/30 dark:hover:bg-gray-800/40 transition-all z-10"
+                aria-label="Scroll right"
+              >
+                <svg className="w-6 h-6 text-text-primary dark:text-text-primary-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </>
+          )}
 
           <div className="absolute inset-y-0 left-0 w-12 md:w-20 pointer-events-none z-10" style={{
-            background: 'linear-gradient(to right, var(--gradient-color) 0%, transparent 100%)'
+            background: 'linear-gradient(to right, var(--gradient-color) 0%, var(--gradient-color) 2%, transparent 100%)'
           }}></div>
           <div className="absolute inset-y-0 right-0 w-12 md:w-20 pointer-events-none z-10" style={{
-            background: 'linear-gradient(to left, var(--gradient-color) 0%, transparent 100%)'
+            background: 'linear-gradient(to left, var(--gradient-color) 0%, var(--gradient-color) 2%, transparent 100%)'
           }}></div>
         </div>
       </div>
