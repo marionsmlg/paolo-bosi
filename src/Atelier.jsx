@@ -23,12 +23,24 @@ export default function Atelier() {
             aria-label="Totem en cours de travail dans l'atelier"
           />
         </div>
-        <p className="mt-8 max-w-xl text-center text-base leading-relaxed text-text-secondary dark:text-text-secondary-dark">
-          L'atelier est mon sanctuaire. Un lieu où la poussière de marbre raconte
-          des histoires et où chaque outil est une extension de ma main. C'est ici,
-          dans cette lumière filtrée, que les idées prennent corps et que la pierre
-          commence à parler.
-        </p>
+        <div className="mt-8 max-w-4xl text-center text-base leading-relaxed text-text-secondary dark:text-text-secondary-dark space-y-4">
+          <p>
+            L'atelier de Vallauris est un monde en soi : briques trouées, sciure de bois, câbles, poulies, fragments de matière tranchés net.<br />
+            Un apparent chaos d'où émergent des formes d'une précision presque prothétique.
+          </p>
+          <p>
+            Paolo travaille le bois dense, celui qui résiste, celui qui oblige à écouter avant d'agir.<br />
+            Son geste est longuement médité, précédé d'heures de silence où la forme se révèle peu à peu.
+          </p>
+          <p>
+            Dans ses sculptures, il associe parfois la terre cuite — une argile qu'il façonne puis imbrique comme un contrepoint au bois.<br />
+            Ces inserts ajustent les volumes, créent des tensions, relient les différentes masses comme des articulations secrètes.
+          </p>
+          <p>
+            Dans cette lumière filtrée, parmi les outils, la poussière et les chutes de matière, les sculptures attendent leur transformation —<br />
+            comme des corps en devenir.
+          </p>
+        </div>
       </div>
     </section>
   );
