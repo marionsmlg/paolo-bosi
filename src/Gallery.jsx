@@ -353,10 +353,10 @@ export default function Gallery() {
             </>
           )}
 
-          <div className="absolute inset-y-0 left-0 w-12  pointer-events-none z-10" style={{
+          <div className="absolute inset-y-0 left-0 w-4 md:w-12 pointer-events-none z-10" style={{
             background: 'linear-gradient(to right, var(--gradient-color) 0%, var(--gradient-color) 2%, transparent 100%)'
           }}></div>
-          <div className="absolute inset-y-0 right-0 w-12 pointer-events-none z-10" style={{
+          <div className="absolute inset-y-0 right-0 w-4 md:w-12 pointer-events-none z-10" style={{
             background: 'linear-gradient(to left, var(--gradient-color) 0%, var(--gradient-color) 2%, transparent 100%)'
           }}></div>
         </div>

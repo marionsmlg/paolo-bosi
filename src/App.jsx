@@ -10,7 +10,7 @@ import Navigation from './Navigation'
 function App() {
   return (
     <div className="relative flex min-h-screen w-full flex-col">
-      <header className="w-full py-8 flex justify-center animate-fadeIn">
+      <header className="w-full py-8 flex justify-center">
         <img
           src="/images/Logo_PaoloBosi2-removebg-preview.png"
           alt="Paolo Bosi Logo"

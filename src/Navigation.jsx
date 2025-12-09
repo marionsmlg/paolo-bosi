@@ -1,7 +1,24 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isInGallery, setIsInGallery] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const gallerySection = document.getElementById('gallery');
+      if (gallerySection) {
+        const rect = gallerySection.getBoundingClientRect();
+        // Apparaît quand on atteint la section gallery et reste visible après
+        const shouldShow = rect.top <= 0;
+        setIsInGallery(shouldShow);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial position
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -23,14 +40,14 @@ export default function Navigation() {
 
   return (
     <>
-      {/* Navigation Desktop - Horizontale en haut à droite */}
-      <nav className="hidden lg:block fixed top-8 right-8 z-50">
+      {/* Navigation Desktop - Horizontale centrée sticky */}
+      <nav className={`hidden lg:block fixed top-8 left-1/2 -translate-x-1/2 z-50 transition-opacity duration-500 ${isInGallery ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
         <ul className="flex gap-6 backdrop-blur-md bg-white/30 dark:bg-gray-800/30 rounded-full px-6 py-3 shadow-lg">
           {navItems.map((item) => (
             <li key={item.id}>
               <button
                 onClick={() => scrollToSection(item.id)}
-                className="text-sm text-text-secondary dark:text-text-secondary-dark hover:text-text-primary dark:hover:text-text-primary-dark transition-colors whitespace-nowrap"
+                className="text-sm text-gray-700 dark:text-gray-300 hover:text-text-primary dark:hover:text-text-primary-dark transition-colors whitespace-nowrap"
               >
                 {item.label}
               </button>
@@ -68,7 +85,7 @@ export default function Navigation() {
                 <li key={item.id}>
                   <button
                     onClick={() => scrollToSection(item.id)}
-                    className="w-full text-left px-6 py-3 text-sm text-text-secondary dark:text-text-secondary-dark hover:text-text-primary dark:hover:text-text-primary-dark hover:bg-white/20 dark:hover:bg-gray-700/20 transition-colors"
+                    className="w-full text-left px-6 py-3 text-sm text-gray-700 dark:text-gray-300 hover:text-text-primary dark:hover:text-text-primary-dark hover:bg-white/20 dark:hover:bg-gray-700/20 transition-colors"
                   >
                     {item.label}
                   </button>

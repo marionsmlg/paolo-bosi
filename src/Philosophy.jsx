@@ -3,7 +3,7 @@ export default function Philosophy() {
     <section className="w-full py-16 md:py-24">
       <div className="mx-auto flex max-w-4xl flex-col items-center px-4 text-center">
         <h2 className="text-2xl font-bold uppercase leading-tight tracking-[0.2em]">
-          SCULPTURES &amp; SILENCE
+          DIALOGUE AVEC LA MATIERE
         </h2>
         <div className="mt-8 text-base leading-relaxed text-text-secondary dark:text-text-secondary-dark space-y-4">
           <p>
