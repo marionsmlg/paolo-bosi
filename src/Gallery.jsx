@@ -349,8 +349,12 @@ export default function Gallery() {
             </svg>
           </button>
 
-          <div className="absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-background-light dark:from-background-dark to-transparent pointer-events-none z-10"></div>
-          <div className="absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-background-light dark:from-background-dark to-transparent pointer-events-none z-10"></div>
+          <div className="absolute inset-y-0 left-0 w-12 md:w-20 pointer-events-none z-10" style={{
+            background: 'linear-gradient(to right, var(--gradient-color) 0%, transparent 100%)'
+          }}></div>
+          <div className="absolute inset-y-0 right-0 w-12 md:w-20 pointer-events-none z-10" style={{
+            background: 'linear-gradient(to left, var(--gradient-color) 0%, transparent 100%)'
+          }}></div>
         </div>
       </div>
     </section>
