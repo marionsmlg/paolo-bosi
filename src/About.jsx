@@ -4,7 +4,7 @@ export default function About() {
       <div className="mx-auto flex max-w-5xl flex-col md:flex-row items-center gap-16 px-4">
         <div className="flex-1">
           <img
-            src="/images/gallery/Totem_2024.jpg"
+            src="/images/gallery/Totem_2024.webp"
             alt="Paolo Bosi avec un totem"
             className="w-full h-auto object-cover rounded"
           />

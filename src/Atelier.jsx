@@ -9,7 +9,7 @@ export default function Atelier() {
           <div
             className="flex-1 aspect-[3/4] bg-cover bg-center bg-no-repeat rounded"
             style={{
-              backgroundImage: 'url("/images/atelier/Atelier.jpg")',
+              backgroundImage: 'url("/images/atelier/Atelier.webp")',
             }}
             role="img"
             aria-label="Vue de l'atelier de sculpture"
@@ -17,7 +17,7 @@ export default function Atelier() {
           <div
             className="flex-1 aspect-[3/4] bg-cover bg-center bg-no-repeat rounded"
             style={{
-              backgroundImage: 'url("/images/atelier/Totem_En_Travail.jpg")',
+              backgroundImage: 'url("/images/atelier/Totem_En_Travail.webp")',
             }}
             role="img"
             aria-label="Totem en cours de travail dans l'atelier"

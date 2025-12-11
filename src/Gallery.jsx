@@ -5,168 +5,168 @@ const sculptures = [
     id: 1,
     title: "Buste Dotage I",
     category: "bustes",
-    image: "/images/gallery/Buste_Dotage_1.jpg",
+    image: "/images/gallery/Buste_Dotage_1.webp",
     alt: "Buste en sculpture"
   },
   {
     id: 2,
     title: "Graine d'Érable I",
     category: "graines",
-    image: "/images/gallery/Graine_Derable_1.JPG",
+    image: "/images/gallery/Graine_Derable_1.webp",
     alt: "Graine d'érable sculptée"
   },
   {
     id: 3,
     title: "Graine d'Érable II",
     category: "graines",
-    image: "/images/gallery/Graine_Derable_2.JPG",
+    image: "/images/gallery/Graine_Derable_2.webp",
     alt: "Graine d'érable sculptée"
   },
   {
     id: 4,
     title: "Paysage Graine",
     category: "graines",
-    image: "/images/gallery/Paysage_Graine.jpg",
+    image: "/images/gallery/Paysage_Graine.webp",
     alt: "Paysage avec graine"
   },
   {
     id: 5,
     title: "Aile",
     category: "ailes",
-    image: "/images/gallery/Aile.jpg",
+    image: "/images/gallery/Aile.webp",
     alt: "Aile sculptée"
   },
   {
     id: 6,
     title: "Plaques I",
     category: "plaques",
-    image: "/images/gallery/Plaques_1.jpg",
+    image: "/images/gallery/Plaques_1.webp",
     alt: "Plaques murales"
   },
   {
     id: 7,
     title: "Plaques II",
     category: "plaques",
-    image: "/images/gallery/Plaques_2.jpg",
+    image: "/images/gallery/Plaques_2.webp",
     alt: "Plaques murales"
   },
   {
     id: 8,
     title: "Plaques III",
     category: "plaques",
-    image: "/images/gallery/Plaques_3.jpg",
+    image: "/images/gallery/Plaques_3.webp",
     alt: "Plaques murales"
   },
   {
     id: 9,
     title: "Plaques Terre Cuite I",
     category: "plaques",
-    image: "/images/gallery/Plaques_Terre_Cuite_1.jpg",
+    image: "/images/gallery/Plaques_Terre_Cuite_1.webp",
     alt: "Plaques en terre cuite"
   },
   {
     id: 10,
     title: "Plaques Terre Cuite II",
     category: "plaques",
-    image: "/images/gallery/Plaques_Terre_Cuite_2.jpg",
+    image: "/images/gallery/Plaques_Terre_Cuite_2.webp",
     alt: "Plaques en terre cuite"
   },
   {
     id: 11,
     title: "Plaques Terre Cuite III",
     category: "plaques",
-    image: "/images/gallery/Plaques_Terre_Cuite_3.jpg",
+    image: "/images/gallery/Plaques_Terre_Cuite_3.webp",
     alt: "Plaques en terre cuite"
   },
   {
     id: 12,
     title: "Plaques Terre Cuite et Bois I",
     category: "plaques",
-    image: "/images/gallery/Plaques_Terres_Cuite_Et_Bois_1.jpg",
+    image: "/images/gallery/Plaques_Terres_Cuite_Et_Bois_1.webp",
     alt: "Plaques en terre cuite et bois"
   },
   {
     id: 13,
     title: "Plaques Terre Cuite et Bois II",
     category: "plaques",
-    image: "/images/gallery/Plaques_Terres_Cuite_Et_Bois_2.jpg",
+    image: "/images/gallery/Plaques_Terres_Cuite_Et_Bois_2.webp",
     alt: "Plaques en terre cuite et bois"
   },
   {
     id: 14,
     title: "Plaques Terres Cuites IV",
     category: "plaques",
-    image: "/images/gallery/Plaques_Terres_Cuites_4.jpg",
+    image: "/images/gallery/Plaques_Terres_Cuites_4.webp",
     alt: "Plaques en terre cuite"
   },
   {
     id: 15,
     title: "Plaques Terres Cuites V",
     category: "plaques",
-    image: "/images/gallery/Plaques_Terres_Cuites_5.jpg",
+    image: "/images/gallery/Plaques_Terres_Cuites_5.webp",
     alt: "Plaques en terre cuite"
   },
   {
     id: 16,
     title: "Totem 2023",
     category: "totems",
-    image: "/images/gallery/Totem_2023.jpg",
+    image: "/images/gallery/Totem_2023.webp",
     alt: "Totem 2023"
   },
   {
     id: 17,
     title: "Totem 2024",
     category: "totems",
-    image: "/images/gallery/Totem_2024.jpg",
+    image: "/images/gallery/Totem_2024.webp",
     alt: "Totem 2024"
   },
   {
     id: 18,
     title: "Totem 2025",
     category: "totems",
-    image: "/images/gallery/Totem_2025.jpg",
+    image: "/images/gallery/Totem_2025.webp",
     alt: "Totem 2025"
   },
   {
     id: 19,
     title: "Gongshi",
     category: "paysages",
-    image: "/images/gallery/Gongshi.jpg",
+    image: "/images/gallery/Gongshi.webp",
     alt: "Gongshi"
   },
   {
     id: 20,
     title: "Matrice Paysage",
     category: "paysages",
-    image: "/images/gallery/Matrice_Paysage.jpg",
+    image: "/images/gallery/Matrice_Paysage.webp",
     alt: "Matrice paysage"
   },
   {
     id: 21,
     title: "Sculpture Paysage Pierre de Lettré I",
     category: "paysages",
-    image: "/images/gallery/Sculpture_Paysage_Pierre_de_Lettre_1.jpg",
+    image: "/images/gallery/Sculpture_Paysage_Pierre_de_Lettre_1.webp",
     alt: "Sculpture paysage en pierre de lettré"
   },
   {
     id: 22,
     title: "Sculpture Paysage Pierre de Lettré II",
     category: "paysages",
-    image: "/images/gallery/Sculpture_Paysage_Pierre_de_Lettre_2.jpg",
+    image: "/images/gallery/Sculpture_Paysage_Pierre_de_Lettre_2.webp",
     alt: "Sculpture paysage en pierre de lettré"
   },
   {
     id: 23,
     title: "Sculptures Longues",
     category: "autres",
-    image: "/images/gallery/Sculptures_Longues.jpg",
+    image: "/images/gallery/Sculptures_Longues.webp",
     alt: "Sculptures longues"
   },
   {
     id: 24,
     title: "Buste Dotage II",
     category: "bustes",
-    image: "/images/gallery/Buste_Dotage_2.jpg",
+    image: "/images/gallery/Buste_Dotage_2.webp",
     alt: "Buste en sculpture"
   }
 ];
@@ -219,7 +219,7 @@ export default function Gallery() {
     <section className="w-full py-8">
       <div className="mx-auto flex max-w-[90%] flex-col items-center px-4">
         <h2 className="text-2xl font-bold uppercase leading-tight tracking-[0.2em]">
-          GALLERIE
+          GALERIE
         </h2>
 
         <div className="mt-6 flex flex-wrap justify-center gap-4">
