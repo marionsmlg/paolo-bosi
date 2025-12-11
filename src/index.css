@@ -56,6 +56,13 @@ body {
   animation: scroll 50s linear infinite;
 }
 
+/* Animation plus rapide sur mobile */
+@media (max-width: 768px) {
+  .animate-scroll {
+    animation: scroll 25s linear infinite;
+  }
+}
+
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }

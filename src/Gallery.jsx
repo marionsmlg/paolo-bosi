@@ -248,11 +248,14 @@ export default function Gallery() {
                   className="overflow-x-auto scrollbar-hide px-8"
                   style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                 >
-                  <div className={`flex ${shouldAutoScroll ? '' : 'justify-center'} ${shouldAutoScroll ? 'animate-scroll' : ''}`}>
+                  <div
+                    className={`flex gap-6 ${shouldAutoScroll ? '' : 'justify-center md:justify-center'} ${shouldAutoScroll ? 'animate-scroll' : ''}`}
+                    style={shouldAutoScroll ? {} : { minWidth: 'max-content' }}
+                  >
                     {displaySculptures
                       .filter((_, index) => index % 2 === 0)
                       .map((sculpture, index) => (
-                      <div key={`${sculpture.id}-${index}-row1`} className="flex-shrink-0 px-3">
+                      <div key={`${sculpture.id}-${index}-row1`} className="flex-shrink-0">
                         <div className="flex flex-col gap-3 w-[200px] sm:w-[250px] md:w-[300px]">
                           <div
                             className="aspect-[3/4] w-full bg-cover bg-center bg-no-repeat rounded"
@@ -276,11 +279,14 @@ export default function Gallery() {
                   className="overflow-x-auto scrollbar-hide px-8"
                   style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                 >
-                  <div className={`flex ${shouldAutoScroll ? '' : 'justify-center'} ${shouldAutoScroll ? 'animate-scroll' : ''}`}>
+                  <div
+                    className={`flex gap-6 ${shouldAutoScroll ? '' : 'justify-center md:justify-center'} ${shouldAutoScroll ? 'animate-scroll' : ''}`}
+                    style={shouldAutoScroll ? {} : { minWidth: 'max-content' }}
+                  >
                     {displaySculptures
                       .filter((_, index) => index % 2 === 1)
                       .map((sculpture, index) => (
-                      <div key={`${sculpture.id}-${index}-row2`} className="flex-shrink-0 px-3">
+                      <div key={`${sculpture.id}-${index}-row2`} className="flex-shrink-0">
                         <div className="flex flex-col gap-3 w-[200px] sm:w-[250px] md:w-[300px]">
                           <div
                             className="aspect-[3/4] w-full bg-cover bg-center bg-no-repeat rounded"
@@ -306,9 +312,9 @@ export default function Gallery() {
                 className="overflow-x-auto scrollbar-hide px-8"
                 style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
               >
-                <div className="flex justify-center">
+                <div className="flex gap-6 justify-center md:justify-center" style={{ minWidth: 'max-content' }}>
                   {displaySculptures.map((sculpture, index) => (
-                    <div key={`${sculpture.id}-${index}-single`} className="flex-shrink-0 px-3">
+                    <div key={`${sculpture.id}-${index}-single`} className="flex-shrink-0">
                       <div className="flex flex-col gap-3 w-[200px] sm:w-[250px] md:w-[300px]">
                         <div
                           className="aspect-[3/4] w-full bg-cover bg-center bg-no-repeat rounded"
