@@ -38,132 +38,146 @@ const sculptures = [
   },
   {
     id: 6,
-    title: "Plaques I",
+    title: "Plaque I",
     category: "plaques",
     image: "/images/gallery/Plaques_1.webp",
     alt: "Plaques murales"
   },
   {
     id: 7,
-    title: "Plaques II",
+    title: "Plaque II",
     category: "plaques",
     image: "/images/gallery/Plaques_2.webp",
     alt: "Plaques murales"
   },
   {
     id: 8,
-    title: "Plaques III",
+    title: "Plaque III",
     category: "plaques",
     image: "/images/gallery/Plaques_3.webp",
     alt: "Plaques murales"
   },
   {
     id: 9,
-    title: "Plaques Terre Cuite I",
+    title: "Plaque Terre Cuite I",
     category: "plaques",
-    image: "/images/gallery/Plaques_Terre_Cuite_1.webp",
+    image: "/images/gallery/Plaques terre cuite 1.webp",
     alt: "Plaques en terre cuite"
   },
   {
     id: 10,
-    title: "Plaques Terre Cuite II",
+    title: "Plaque Terre Cuite II",
     category: "plaques",
-    image: "/images/gallery/Plaques_Terre_Cuite_2.webp",
+    image: "/images/gallery/Plaques terre cuite 2.webp",
     alt: "Plaques en terre cuite"
   },
   {
     id: 11,
-    title: "Plaques Terre Cuite III",
+    title: "Plaque Terre Cuite III",
     category: "plaques",
-    image: "/images/gallery/Plaques_Terre_Cuite_3.webp",
+    image: "/images/gallery/Plaques terre cuite 3.webp",
     alt: "Plaques en terre cuite"
   },
   {
     id: 12,
-    title: "Plaques Terre Cuite et Bois I",
+    title: "Plaque Terre Cuite et Bois I",
     category: "plaques",
     image: "/images/gallery/Plaques_Terres_Cuite_Et_Bois_1.webp",
     alt: "Plaques en terre cuite et bois"
   },
   {
     id: 13,
-    title: "Plaques Terre Cuite et Bois II",
+    title: "Plaque Terre Cuite et Bois II",
     category: "plaques",
     image: "/images/gallery/Plaques_Terres_Cuite_Et_Bois_2.webp",
     alt: "Plaques en terre cuite et bois"
   },
   {
     id: 14,
-    title: "Plaques Terres Cuites IV",
+    title: "Plaque Terre Cuite et Bois III",
+    category: "plaques",
+    image: "/images/gallery/Plaques_Terres_Cuite_Et_Bois_3.webp",
+    alt: "Plaques en terre cuite et bois"
+  },
+  {
+    id: 15,
+    title: "Plaque Terres Cuites IV",
     category: "plaques",
     image: "/images/gallery/Plaques_Terres_Cuites_4.webp",
     alt: "Plaques en terre cuite"
   },
   {
-    id: 15,
-    title: "Plaques Terres Cuites V",
+    id: 16,
+    title: "Plaque Terres Cuites V",
     category: "plaques",
     image: "/images/gallery/Plaques_Terres_Cuites_5.webp",
     alt: "Plaques en terre cuite"
   },
   {
-    id: 16,
+    id: 17,
+    title: "Plaque Terre Cuite VI",
+    category: "plaques",
+    image: "/images/gallery/Plaques terre cuite 6.webp",
+    alt: "Plaques en terre cuite"
+  },
+  {
+    id: 18,
     title: "Totem 2023",
     category: "totems",
     image: "/images/gallery/Totem_2023.webp",
     alt: "Totem 2023"
   },
   {
-    id: 17,
+    id: 19,
     title: "Totem 2024",
     category: "totems",
     image: "/images/gallery/Totem_2024.webp",
     alt: "Totem 2024"
   },
   {
-    id: 18,
+    id: 20,
     title: "Totem 2025",
     category: "totems",
     image: "/images/gallery/Totem_2025.webp",
     alt: "Totem 2025"
   },
   {
-    id: 19,
+    id: 21,
     title: "Gongshi",
     category: "paysages",
     image: "/images/gallery/Gongshi.webp",
     alt: "Gongshi"
   },
   {
-    id: 20,
+    id: 22,
     title: "Matrice Paysage",
     category: "paysages",
     image: "/images/gallery/Matrice_Paysage.webp",
     alt: "Matrice paysage"
   },
   {
-    id: 21,
+    id: 23,
     title: "Sculpture Paysage Pierre de Lettré I",
     category: "paysages",
     image: "/images/gallery/Sculpture_Paysage_Pierre_de_Lettre_1.webp",
     alt: "Sculpture paysage en pierre de lettré"
   },
   {
-    id: 22,
+    id: 24,
     title: "Sculpture Paysage Pierre de Lettré II",
     category: "paysages",
     image: "/images/gallery/Sculpture_Paysage_Pierre_de_Lettre_2.webp",
     alt: "Sculpture paysage en pierre de lettré"
   },
   {
-    id: 23,
+    id: 25,
     title: "Sculptures Longues",
     category: "autres",
     image: "/images/gallery/Sculptures_Longues.webp",
     alt: "Sculptures longues"
   },
   {
-    id: 24,
+    id: 26,
     title: "Buste Dotage II",
     category: "bustes",
     image: "/images/gallery/Buste_Dotage_2.webp",
@@ -256,7 +270,7 @@ export default function Gallery() {
                       .filter((_, index) => index % 2 === 0)
                       .map((sculpture, index) => (
                       <div key={`${sculpture.id}-${index}-row1`} className="flex-shrink-0">
-                        <div className="flex flex-col gap-3 w-[200px] sm:w-[250px] md:w-[300px]">
+                        <div className="flex flex-col gap-3 w-[280px] sm:w-[320px] md:w-[380px] lg:w-[420px]">
                           <div
                             className="aspect-[3/4] w-full bg-cover bg-center bg-no-repeat rounded"
                             style={{ backgroundImage: `url("${sculpture.image}")` }}
@@ -287,7 +301,7 @@ export default function Gallery() {
                       .filter((_, index) => index % 2 === 1)
                       .map((sculpture, index) => (
                       <div key={`${sculpture.id}-${index}-row2`} className="flex-shrink-0">
-                        <div className="flex flex-col gap-3 w-[200px] sm:w-[250px] md:w-[300px]">
+                        <div className="flex flex-col gap-3 w-[280px] sm:w-[320px] md:w-[380px] lg:w-[420px]">
                           <div
                             className="aspect-[3/4] w-full bg-cover bg-center bg-no-repeat rounded"
                             style={{ backgroundImage: `url("${sculpture.image}")` }}
@@ -315,7 +329,7 @@ export default function Gallery() {
                 <div className="flex gap-6 justify-center md:justify-center" style={{ minWidth: 'max-content' }}>
                   {displaySculptures.map((sculpture, index) => (
                     <div key={`${sculpture.id}-${index}-single`} className="flex-shrink-0">
-                      <div className="flex flex-col gap-3 w-[200px] sm:w-[250px] md:w-[300px]">
+                      <div className="flex flex-col gap-3 w-[280px] sm:w-[320px] md:w-[380px] lg:w-[420px]">
                         <div
                           className="aspect-[3/4] w-full bg-cover bg-center bg-no-repeat rounded"
                           style={{ backgroundImage: `url("${sculpture.image}")` }}
