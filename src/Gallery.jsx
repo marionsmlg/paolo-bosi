@@ -108,48 +108,41 @@ const sculptures = [
   },
   {
     id: 17,
-    title: "Totem 2025",
-    category: "totems",
-    image: "/images/gallery/Totem_2025.webp",
-    alt: "Totem 2025"
-  },
-  {
-    id: 18,
     title: "Gongshi",
     category: "paysages",
     image: "/images/gallery/Gongshi.webp",
     alt: "Gongshi"
   },
   {
-    id: 19,
+    id: 18,
     title: "Matrice Paysage",
     category: "paysages",
     image: "/images/gallery/Matrice_Paysage.webp",
     alt: "Matrice paysage"
   },
   {
-    id: 20,
+    id: 19,
     title: "Sculpture Paysage Pierre de Lettré I",
     category: "paysages",
     image: "/images/gallery/Sculpture_Paysage_Pierre_de_Lettre_1.webp",
     alt: "Sculpture paysage en pierre de lettré"
   },
   {
-    id: 21,
+    id: 20,
     title: "Sculpture Paysage Pierre de Lettré II",
     category: "paysages",
     image: "/images/gallery/Sculpture_Paysage_Pierre_de_Lettre_2.webp",
     alt: "Sculpture paysage en pierre de lettré"
   },
   {
-    id: 22,
+    id: 21,
     title: "Sculptures Longues",
     category: "autres",
     image: "/images/gallery/Sculptures_Longues.webp",
     alt: "Sculptures longues"
   },
   {
-    id: 23,
+    id: 22,
     title: "Buste Dotage II",
     category: "bustes",
     image: "/images/gallery/Buste_Dotage_2.webp",
