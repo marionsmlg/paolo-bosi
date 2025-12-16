@@ -32,7 +32,7 @@ const sculptures = [
   {
     id: 5,
     title: "Aile",
-    category: "ailes",
+    category: "autres",
     image: "/images/gallery/Aile.webp",
     alt: "Aile sculptée"
   },
@@ -101,14 +101,14 @@ const sculptures = [
   },
   {
     id: 15,
-    title: "Plaque Terres Cuites IV",
+    title: "Plaque Terre Cuites IV",
     category: "plaques",
     image: "/images/gallery/Plaques_Terres_Cuites_4.webp",
     alt: "Plaques en terre cuite"
   },
   {
     id: 16,
-    title: "Plaque Terres Cuites V",
+    title: "Plaque Terre Cuites V",
     category: "plaques",
     image: "/images/gallery/Plaques_Terres_Cuites_5.webp",
     alt: "Plaques en terre cuite"
@@ -189,11 +189,10 @@ const categories = [
   { id: "tous", label: "Tous" },
   { id: "bustes", label: "Bustes" },
   { id: "graines", label: "Graines" },
-  { id: "ailes", label: "Ailes" },
   { id: "plaques", label: "Plaques" },
   { id: "totems", label: "Totems" },
   { id: "paysages", label: "Paysages" },
-  { id: "autres", label: "Autres" }
+  { id: "autres", label: "Sculptures" }
 ];
 
 export default function Gallery() {
@@ -329,7 +328,7 @@ export default function Gallery() {
                 <div className="flex gap-6 justify-center md:justify-center" style={{ minWidth: 'max-content' }}>
                   {displaySculptures.map((sculpture, index) => (
                     <div key={`${sculpture.id}-${index}-single`} className="flex-shrink-0">
-                      <div className="flex flex-col gap-3 w-[280px] sm:w-[320px] md:w-[380px] lg:w-[420px]">
+                      <div className="flex flex-col gap-3 w-[200px] sm:w-[250px] md:w-[300px]">
                         <div
                           className="aspect-[3/4] w-full bg-cover bg-center bg-no-repeat rounded"
                           style={{ backgroundImage: `url("${sculpture.image}")` }}

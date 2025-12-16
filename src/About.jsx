@@ -2,11 +2,11 @@ export default function About() {
   return (
     <section className="w-full py-16 md:py-24">
       <div className="mx-auto flex max-w-5xl flex-col md:flex-row items-center gap-16 px-4">
-        <div className="flex-1">
+        <div className="flex-1 rounded">
           <img
             src="/images/Totem_2024.webp"
             alt="Paolo Bosi avec un totem"
-            className="w-full h-auto object-cover rounded"
+            className="w-full h-auto object-cover rounded shadow-lg"
           />
         </div>
         <div className="flex-1 flex flex-col justify-center">
