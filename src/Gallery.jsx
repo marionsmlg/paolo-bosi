@@ -12,13 +12,6 @@ const sculptures = [
     id: 2,
     title: "Graine d'Érable I",
     category: "graines",
-    image: "/images/gallery/Graine_Derable_1.webp",
-    alt: "Graine d'érable sculptée"
-  },
-  {
-    id: 3,
-    title: "Graine d'Érable II",
-    category: "graines",
     image: "/images/gallery/Graine_Derable_2.webp",
     alt: "Graine d'érable sculptée"
   },
