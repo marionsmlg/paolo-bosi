@@ -38,139 +38,118 @@ const sculptures = [
   },
   {
     id: 7,
-    title: "Plaque II",
-    category: "plaques",
-    image: "/images/gallery/Plaques_2.webp",
-    alt: "Plaques murales"
-  },
-  {
-    id: 8,
     title: "Plaque III",
     category: "plaques",
     image: "/images/gallery/Plaques_3.webp",
     alt: "Plaques murales"
   },
   {
-    id: 9,
+    id: 8,
     title: "Plaque Terre Cuite I",
-    category: "plaques",
-    image: "/images/gallery/Plaques terre cuite 1.webp",
-    alt: "Plaques en terre cuite"
-  },
-  {
-    id: 10,
-    title: "Plaque Terre Cuite II",
     category: "plaques",
     image: "/images/gallery/Plaques terre cuite 2.webp",
     alt: "Plaques en terre cuite"
   },
   {
-    id: 11,
-    title: "Plaque Terre Cuite III",
+    id: 9,
+    title: "Plaque Terre Cuite II",
     category: "plaques",
     image: "/images/gallery/Plaques terre cuite 3.webp",
     alt: "Plaques en terre cuite"
   },
   {
-    id: 12,
+    id: 10,
     title: "Plaque Terre Cuite et Bois I",
     category: "plaques",
     image: "/images/gallery/Plaques_Terres_Cuite_Et_Bois_1.webp",
     alt: "Plaques en terre cuite et bois"
   },
   {
-    id: 13,
+    id: 11,
     title: "Plaque Terre Cuite et Bois II",
     category: "plaques",
     image: "/images/gallery/Plaques_Terres_Cuite_Et_Bois_2.webp",
     alt: "Plaques en terre cuite et bois"
   },
   {
-    id: 14,
+    id: 12,
     title: "Plaque Terre Cuite et Bois III",
     category: "plaques",
     image: "/images/gallery/Plaques_Terres_Cuite_Et_Bois_3.webp",
     alt: "Plaques en terre cuite et bois"
   },
   {
-    id: 15,
-    title: "Plaque Terre Cuites IV",
-    category: "plaques",
-    image: "/images/gallery/Plaques_Terres_Cuites_4.webp",
-    alt: "Plaques en terre cuite"
-  },
-  {
-    id: 16,
-    title: "Plaque Terre Cuites V",
+    id: 13,
+    title: "Plaque Terre Cuite III",
     category: "plaques",
     image: "/images/gallery/Plaques_Terres_Cuites_5.webp",
     alt: "Plaques en terre cuite"
   },
   {
-    id: 17,
-    title: "Plaque Terre Cuite VI",
+    id: 14,
+    title: "Plaque Terre Cuite IV",
     category: "plaques",
     image: "/images/gallery/Plaques terre cuite 6.webp",
     alt: "Plaques en terre cuite"
   },
   {
-    id: 18,
+    id: 15,
     title: "Totem 2023",
     category: "totems",
     image: "/images/gallery/Totem_2023.webp",
     alt: "Totem 2023"
   },
   {
-    id: 19,
+    id: 16,
     title: "Totem 2024",
     category: "totems",
     image: "/images/gallery/Totem_2024.webp",
     alt: "Totem 2024"
   },
   {
-    id: 20,
+    id: 17,
     title: "Totem 2025",
     category: "totems",
     image: "/images/gallery/Totem_2025.webp",
     alt: "Totem 2025"
   },
   {
-    id: 21,
+    id: 18,
     title: "Gongshi",
     category: "paysages",
     image: "/images/gallery/Gongshi.webp",
     alt: "Gongshi"
   },
   {
-    id: 22,
+    id: 19,
     title: "Matrice Paysage",
     category: "paysages",
     image: "/images/gallery/Matrice_Paysage.webp",
     alt: "Matrice paysage"
   },
   {
-    id: 23,
+    id: 20,
     title: "Sculpture Paysage Pierre de Lettré I",
     category: "paysages",
     image: "/images/gallery/Sculpture_Paysage_Pierre_de_Lettre_1.webp",
     alt: "Sculpture paysage en pierre de lettré"
   },
   {
-    id: 24,
+    id: 21,
     title: "Sculpture Paysage Pierre de Lettré II",
     category: "paysages",
     image: "/images/gallery/Sculpture_Paysage_Pierre_de_Lettre_2.webp",
     alt: "Sculpture paysage en pierre de lettré"
   },
   {
-    id: 25,
+    id: 22,
     title: "Sculptures Longues",
     category: "autres",
     image: "/images/gallery/Sculptures_Longues.webp",
     alt: "Sculptures longues"
   },
   {
-    id: 26,
+    id: 23,
     title: "Buste Dotage II",
     category: "bustes",
     image: "/images/gallery/Buste_Dotage_2.webp",
